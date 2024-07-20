@@ -18,6 +18,8 @@ const userNumber = document.getElementById("number");
 const string = document.getElementById("stringa");
 const invio = document.getElementById("invio");
 
+// Pari
+
 pari.addEventListener("click",
     function(eventPari){
         let numberInput = document.getElementById("numberInput");
@@ -33,6 +35,33 @@ pari.addEventListener("click",
                 
                 const risultato = document.getElementById("result");
                 if(sum(numeroCasuale, numberInput.value) % 2 == 0){
+                    risultato.innerHTML= "Hai vinto!";
+                }
+                else{
+                    risultato.innerHTML= "Hai perso!";
+                }
+            }
+        )
+    }
+)
+
+// Dispari
+
+dispari.addEventListener("click",
+    function(eventPari){
+        let numberInput = document.getElementById("numberInput");
+        userNumber.classList.replace("d-none", "d-block");
+        string.classList.replace("d-none", "d-block");
+        invio.addEventListener("click", 
+            function(submit){
+                console.log("Numero dell'utente:", numberInput.value)
+                const numeroCasuale = randomNum();
+                console.log("Numero casuale tra 1 e 5:", numeroCasuale);
+                sum(numeroCasuale, numberInput.value)
+                console.log(sum(numeroCasuale, numberInput.value));
+                
+                const risultato = document.getElementById("result");
+                if(sum(numeroCasuale, numberInput.value) % 2 !== 0){
                     risultato.innerHTML= "Hai vinto!";
                 }
                 else{
