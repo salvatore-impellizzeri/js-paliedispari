@@ -26,9 +26,8 @@
 
             <h1 class="text-center m-5">Pari o Dispari</h1>
             <div class="container">
-                <h2>Inserisci un numero da 1 a 5</h2>
-                <form action="">
-                    <div class="my-4 mx-auto"> 
+                <form class="text-center" action="">
+                    <div class="my-4"> 
                         <button id="pari-button" class="btn fw-medium btn-dark" type="button">
                             Pari
                         </button>
@@ -38,10 +37,13 @@
                     </div>
                 </form>
 
-                <form action="" id="number" class="d-none" >
-                    <input type="number" max="5" min="1">
-                    <button id="invio" type="submit">Invia</button>
+                <form action="" id="number" class="d-none text-center">
+                    <label for="numberInput" id="stringa" class="d-none mb-3">Seleziona un numero da 1 a 5</label>
+                    <input type="number" id="numberInput" max="5" min="1" required>
+                    <button id="invio" type="button">Invia</button>
                 </form>
+
+                <p class="text-center fs-3 my-4" id="result"></p>
 
             </div>
 
